@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Like Button</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="title">Dünya Çapında Beğeni</h1>
+        
+        <div class="heart-container">
+            <i class="fas fa-heart" id="heart-btn" onclick="sendLike()"></i>
+        </div>
+
+        <div class="counter-box">
+            <span id="like-count">...</span>
+            <p>Kişi bunu beğendi</p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
