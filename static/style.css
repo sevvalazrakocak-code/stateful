@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-color: #121212; /* Çok koyu gri/siyah */
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    text-transform: uppercase;
+}
+
+.heart-container {
+    margin-bottom: 2rem;
+}
+
+#heart-btn {
+    font-size: 8rem;
+    color: #333; /* Pasif renk */
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Neon gölge efekti - başlangıçta sönük */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0); 
+}
+
+/* Kalbe mouse ile gelince */
+#heart-btn:hover {
+    color: #ff4d4d;
+    transform: scale(1.1);
+    text-shadow: 0 0 30px #ff0000;
+}
+
+/* Tıklama anı efekti (JS ile eklenecek class) */
+.pump {
+    animation: heartbeat 0.4s ease-in-out;
+    color: #ff0000 !important;
+    text-shadow: 0 0 50px #ff0000, 0 0 100px #ff0000 !important;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.85); }
+    100% { transform: scale(1); }
+}
+
+.counter-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: inline-block;
+    backdrop-filter: blur(5px);
+}
+
+#like-count {
+    font-size: 2rem;
+    font-weight: bold;
+    display: block;
+}
+
+p {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
